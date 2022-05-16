@@ -10,11 +10,12 @@ body {
 }
 
 #corpo {
-  margin: 0px auto;
+  margin: 10px auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
   width: 100%;
+  height: 600px;
   /* border: 1px solid green; */
   padding-right: 250px;
 }
@@ -25,18 +26,19 @@ body {
   margin-left: 95px;
 }
 
-#login {
+#corpo #login {
   border: 1px solid red;
   width: 400px;
+  height: 100%;
+  margin-top: 30px;
   margin-left: -150px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
 
-#login #formulario {
+#login {
   border: 1px solid #DBDBDB;
-  height: 50%;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -44,7 +46,7 @@ body {
   background-color: white;
 }
 
-#login #formulario input {
+#login input {
   display: block;
   width: 290px;
   height: 35px;
@@ -54,7 +56,7 @@ body {
   border-radius: 2px;
 }
 
-#login #formulario button {
+#login button {
   width: 290px;
   height: 30px;
   margin-top: 20px;
@@ -65,14 +67,32 @@ body {
   font-weight: bold;
 }
 
-#login #formulario #face {
+#login #face {
   width: 290px;
   margin-top: 20px;
   display: inline
 }
 
-span {
-  width: 200px;
+#linha span {
+  text-align: center;
+  font-size: 1px;
+  background-color: #DBDBDB;
+  border-radius: 1px;
+}
+
+#linha span:after,
+#linha span:before {
+  content: '';
+  display: inline-block;
+  width: 60px;
+  height: 3px;
+  background-color: #DBDBDB;
+  margin: 0 auto;
+}
+
+#ou {
+  display: inline;
+  margin: 10px 10px;
 }
 
 .cor-login {
@@ -81,13 +101,45 @@ span {
 }
 
 #login #cadastro {
-  /* border: 1px solid blue; */
   height: 10%;
   background-color: white;
 }
 
+#login #face #enter a {
+  display: flex;
+  align-items: column;
+  padding: 10px;
+}
+
+
 @media(max-width: 320px) {
   #phone {
     display: none;
+  }
+
+  #corpo {
+    margin: 0px auto;
+    width: 320px;
+    height: 568px;
+    padding: 0px;
+
+  }
+
+  #corpo #login {
+    display: flex;
+    align-items: center;
+    margin-left: 0px;
+    height: 100%;
+    border: 1px solid green;
+  }
+
+  #corpo #login {
+    width: 318px;
+    height: 90%;
+  }
+
+  #corpo #cadastro {
+    width: 100%;
+    margin-top: 10px;
   }
 }
